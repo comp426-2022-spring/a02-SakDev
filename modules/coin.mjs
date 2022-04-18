@@ -15,7 +15,7 @@
  */
 
 function coinFlip() {
-  return (Math.floor(Math.random() * 2) == 0) ? 'heads' : 'tails';
+  return (Math.random() < 0.5 ? 'tails' : 'heads');
 }
 
 // console.log(coinFlip())
@@ -42,9 +42,13 @@ function coinFlip() {
 function coinFlips(flips) {
   var flips_arr = [];
 
-  for (var i=0;i<flips;i++){
-    flips_arr[i]=coinFlip();
-  }
+  if (!flips) {
+    flips_arr.push(coinFlip());
+  } else {
+      for (var i=0;i<flips;i++){
+        flips_arr.push(coinFlip());
+      }
+  }  
 
   return flips_arr
 }
