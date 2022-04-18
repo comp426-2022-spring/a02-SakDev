@@ -42,13 +42,13 @@ function coinFlip() {
 function coinFlips(flips) {
   var flips_arr = [];
 
-  if (!flips) {
+  if (flips<=0 || typeof flips=="undefined") {
+    flips=1;
+  } 
+
+  for (var i=0;i<flips;i++){
     flips_arr.push(coinFlip());
-  } else {
-      for (var i=0;i<flips;i++){
-        flips_arr.push(coinFlip());
-      }
-  }  
+  }
 
   return flips_arr
 }
