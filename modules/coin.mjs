@@ -46,7 +46,7 @@ function coinFlips(flips) {
     flips=1;
   } 
 
-  for (var i=0;i<flips;i++){
+  for (let i=0;i<flips;i++){
     flips_arr.push(coinFlip());
   }
 
@@ -80,10 +80,10 @@ function countFlips(array) {
   }
  
   if (head_count > 0 && tail_count == 0) {
-    return `{ head_count: ${head_count}}`
+    return `{ heads: ${head_count}}`
   } 
   else if (tail_count > 0 && head_count == 0) {
-    return `{ tail_count: ${tail_count}}`
+    return `{ tails: ${tail_count}}`
   } 
   else {
     return `{ heads: ${head_count}, "tails": ${tail_count} }`
