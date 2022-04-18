@@ -103,12 +103,13 @@ function countFlips(array) {
 
 function flipACoin(call) {
   var flip=coinFlip();
+  var result='win'
 
   if (flipACoin==call){
-    var result='win'
+    result='win'
   }
   else{
-    var result='lost'
+    result='lose'
   }
 
   return "{ call: '"+ call + "', flip: '" + flip + "', result: '" + result + "' }";
