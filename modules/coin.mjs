@@ -79,14 +79,14 @@ function countFlips(array) {
     }
   }
  
-  if (heads > 0 && tails == 0) {
-    return `{ heads: ${heads}}`
+  if (head_count > 0 && tail_count == 0) {
+    return `{ head_count: ${head_count}}`
   } 
-  else if (tails > 0 && heads == 0) {
-    return `{ tails: ${tails}}`
+  else if (tail_count > 0 && head_count == 0) {
+    return `{ tail_count: ${tail_count}}`
   } 
   else {
-    return `{ heads: ${heads}, "tails": ${tails} }`
+    return `{ heads: ${head_count}, "tails": ${tail_count} }`
   }
 }
 
