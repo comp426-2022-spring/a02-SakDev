@@ -99,7 +99,7 @@ function flipACoin(call) {
     var result='lost'
   }
 
-  return "{ call: '"+ call + "', flip: '" + flipped + "', result: '" + result + "' }";
+  return "{ call: '"+ call + "', flip: '" + flip + "', result: '" + result + "' }";
 }
 
 
